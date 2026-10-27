@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CMMS – Closing orders and checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div><h1>Maintenance closing</h1><p id="sub">Connecting...</p></div>
+<div class="hdr"><button id="refresh" class="ghost" hidden>Refresh</button></div></header>
+<nav><button data-tab="closing" class="on">Closing orders</button><button data-tab="checklist">Order checklist</button></nav>
+<main>
+<p id="welcome" class="empty">Loading from Google Sheets...</p>
+<section id="closing" hidden>
+ <div id="sum" class="sum"></div>
+ <div class="wrap"><table><thead><tr><th>Sl.</th><th>Order no.</th><th>Equipment</th><th>Status</th><th>Action</th><th>Closed on</th><th>Closed by</th><th>Remarks</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+ <div class="bar"><button id="saveClose">Save to closure history</button><span class="hint">Closed needs a completed checklist. Deferred can be saved any time.</span></div>
+</section>
+<section id="checklist" hidden>
+ <label class="pick">Maintenance order <select id="order"></select></label>
+ <div id="ckHead" class="grid"></div>
+ <div class="wrap"><table id="ckTable" hidden><thead><tr><th>Seq.</th><th>Check item</th><th>Actual reading</th><th>Mandatory</th><th>Acceptance criteria</th><th>OK / NOT OK</th><th>Notes</th><th>Result</th></tr></thead><tbody id="items"></tbody></table></div>
+ <div class="bar" id="ckBar" hidden><label>Recorded by <input id="by" size="8"></label><b id="ckState"></b><button id="saveCk" disabled>Save to measurement history</button></div>
+</section>
+</main>
+<div id="toast" role="status"></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
