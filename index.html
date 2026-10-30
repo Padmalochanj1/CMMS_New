@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shyam Metalics Maintenance Management Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css"></head>
+<body>
+<svg class="scene" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+ <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a5f8a"/><stop offset="1" stop-color="#0a2a45"/></linearGradient><filter id="bl"><feGaussianBlur stdDeviation="9"/></filter></defs>
+ <g class="smoke" filter="url(#bl)" fill="#b9cddb" opacity=".25"><circle cx="212" cy="92" r="26"/><circle cx="240" cy="54" r="34"/><circle cx="690" cy="84" r="28"/><circle cx="716" cy="42" r="38"/><circle cx="1010" cy="100" r="24"/></g>
+ <g fill="url(#g1)" opacity=".85"><rect y="205" width="1200" height="95"/><polygon points="40,300 40,175 110,140 110,175 180,140 180,175 250,140 250,300"/><polygon points="204,210 208,62 228,62 232,210"/><rect x="300" y="150" width="170" height="150"/><polygon points="670,210 674,68 696,68 700,210"/><polygon points="560,300 560,170 640,130 640,170 720,130 720,300"/><rect x="800" y="165" width="150" height="135"/><polygon points="980,210 984,95 1002,95 1006,210"/><rect x="1040" y="150" width="130" height="150"/></g>
+ <g fill="#ff9d2e"><rect x="208" y="62" width="20" height="5"/><rect x="674" y="68" width="22" height="5"/><rect x="984" y="95" width="18" height="4"/></g>
+ <g class="glow" fill="#ffb347"><rect x="326" y="190" width="22" height="30" rx="3"/><rect x="368" y="190" width="22" height="30" rx="3"/><rect x="410" y="190" width="22" height="30" rx="3"/><rect x="830" y="200" width="22" height="26" rx="3"/><rect x="880" y="200" width="22" height="26" rx="3"/><rect x="1070" y="190" width="20" height="28" rx="3"/><rect x="1110" y="190" width="20" height="28" rx="3"/></g>
+ <path d="M0 262h1200v38H0z" fill="#04121f"/><path d="M0 262h1200" stroke="#19b5c9" stroke-opacity=".5" stroke-width="2"/>
+</svg>
+<main class="hero">
+ <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></div>
+ <h1><span>Shyam Metalics</span>Maintenance Management Portal</h1>
+ <section id="login" class="card glass">
+  <h2>Sign in</h2>
+  <form id="lf">
+   <label>Username <input id="u" autocomplete="username" required></label>
+   <label>Password <input id="p" type="password" autocomplete="current-password" required></label>
+   <button id="go">Sign in</button><p id="err" class="bad" role="alert"></p>
+  </form>
+ </section>
+ <section id="home" hidden>
+  <p class="who">Signed in as <b id="who"></b> <button id="out" class="ghost">Sign out</button></p>
+  <div class="tiles">
+   <a class="tile glass" href="app.html#closing"><span class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 14l2 2 4-4"/></svg></span><div><b>Order closing</b><span>Close or defer today’s maintenance orders</span></div><i>→</i></a>
+   <a class="tile glass" href="app.html#checklist"><span class="ico"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg></span><div><b>Checklist closing</b><span>Record readings and OK / NOT OK for an order</span></div><i>→</i></a>
+  </div>
+ </section>
+</main>
+<script src="config.js"></script><script src="landing.js"></script>
+</body></html>
